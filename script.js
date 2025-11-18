@@ -3,9 +3,14 @@ let graphWidth = 400;
 let graphHeight = 480;
 
 let myFont;
+let heartImage;
+
+function preload() {
+}
 
 async function setup() {
     myFont = await loadFont("IMFellGreatPrimer-Regular.ttf");
+    heartImage = await loadImage("red-heart.png");
 
     createCanvas(600, 600);
     background(180, 211, 178);
@@ -132,4 +137,9 @@ async function setup() {
 
 
 function draw() {
+}
+
+function mousePressed() {
+    image(heartImage, mouseX, mouseY, 20, 20);
+    //rect(mouseX, mouseY, 10, 10);
 }
